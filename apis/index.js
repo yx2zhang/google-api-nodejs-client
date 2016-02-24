@@ -141,7 +141,8 @@ var APIs = {
   'webfonts': requireAPI('webfonts'),
   'webmasters': requireAPI('webmasters'),
   'youtube': requireAPI('youtube'),
-  'youtubeAnalytics': requireAPI('youtubeAnalytics')
+  'youtubeAnalytics': requireAPI('youtubeAnalytics'),
+  'youtubePartner': requireAPI('youtubePartner')
 };
 
 /**
