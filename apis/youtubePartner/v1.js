@@ -35,7 +35,7 @@ function Youtubepartner(options) {
     get: function(params, callback) {
       var parameters = {
         options: {
-          url: 'https://www.googleapis.com/youtube/partner/v1/whitelist/{id}',
+          url: 'https://www.googleapis.com/youtube/partner/v1/whitelists/{id}',
           method: 'GET'
         },
         params: params,
