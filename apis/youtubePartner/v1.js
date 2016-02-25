@@ -104,6 +104,35 @@ function Youtubepartner(options) {
       };
 
       return createAPIRequest(parameters, callback);
+    },
+
+    /**
+     * youtubePartner.whitelists.delete
+     *
+     * @desc Delete a whitelist item.
+     *
+     * @alias youtubePartner.whitelists.delete
+     * @memberOf! youtubePartner(v1)
+     *
+     * @param  {object} params - Parameters for request
+     * @param  {string} params.id - The Youtube channel id.
+     * @param  {string=} params.onBehalfOfContentOwner - The onBehalfOfContentOwner parameter identifies the content owner that the user is acting on behalf of. This parameter supports users whose accounts are associated with multiple content owners.
+     * @param  {callback} callback - The callback that handles the response.
+     * @return {object} Request object
+     */
+    delete: function(params, callback) {
+      var parameters = {
+        options: {
+          url: 'https://www.googleapis.com/youtube/partner/v1/whitelists/{id}',
+          method: 'DELETE'
+        },
+        params: params,
+        requiredParams: ['id'],
+        pathParams: ['id'],
+        context: self
+      };
+
+      return createAPIRequest(parameters, callback);
     }
 
   };
