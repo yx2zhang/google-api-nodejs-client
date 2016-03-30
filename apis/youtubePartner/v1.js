@@ -16,6 +16,41 @@ function Youtubepartner(options) {
   var self = this;
   this._options = options || {};
 
+  this.claimSearch = {
+
+    /**
+    * youtubePartner.claimSearch.list
+    *
+    * @desc Retrieves a list of claims that match the search criteria.
+    *
+    * @alias youtubePartner.claimSearch.get
+    * @memberOf! youtubePartner(v1)
+    *
+    * @param  {object} params - Parameters for request
+    * @param  {string} params.assetId - The assetId parameter specifies the YouTube asset ID of the asset for which you are retrieving claims.
+    * @param  {string} params.q - The q parameter specifies the query string to use to filter search results. YouTube searches for the query string in the following claim fields: video_title, video_keywords, user_name, isrc, iswc, grid, custom_id, and in the content owner's email address.
+    * @param  {string} params.referenceId - The referenceId parameter specifies the YouTube reference ID of the reference for which you are retrieving claims.
+    * @param  {string} params.videoId - The videoId parameter specifies comma-separated list of YouTube video IDs for which you are retrieving claims.
+    * @param  {string} params.contentType - The contentType parameter specifies the content type of claims that you want to retrieve.
+    * @param  {string} params.onBehalfOfContentOwner - The onBehalfOfContentOwner parameter identifies the content owner that the user is acting on behalf of. This parameter supports users whose accounts are associated with multiple content owners.
+    * @param  {callback} callback - The callback that handles the response.
+    * @return {object} Request object
+    */ 
+    list: function(params, callback) {
+      var parameters = {
+        options: {
+          url: 'https://www.googleapis.com/youtube/partner/v1/claimSearch',
+          method: 'GET'
+        },
+        params: params,
+        requiredParams: [],
+        pathParams: [],
+        context: self
+      };
+      return createAPIRequest(parameters, callback);
+    }
+  };
+
   this.whitelists = {
 
     /**
