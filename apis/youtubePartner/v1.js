@@ -16,6 +16,39 @@ function Youtubepartner(options) {
   var self = this;
   this._options = options || {};
 
+  this.claims = {
+    /**
+     * youtubePartner.claims.update
+     *
+     * @desc Updates an existing claim by either changing its policy or its status. You can update a claim's status from active to inactive to effectively release the claim.
+     *
+     * @alias youtubePartner.claims.update
+     * @memberOf! youtubePartner(v1)
+     *
+     * @param  {object}  params - Parameters for request
+     * @param  {object}  params.claimId - The claimId parameter specifies the claim ID of the claim being updated.
+     * @param  {string=} params.onBehalfOfContentOwner - The onBehalfOfContentOwner parameter identifies the content owner that the user is acting on behalf of. This parameter supports users whose accounts are associated with multiple content owners.
+     * @param  {object}  params.resource - Request body data
+     * @param  {callback} callback - The callback that handles the response.
+     * @return {object} Request object
+     */
+
+    update: function(params, callback){
+       var parameters = {
+        options: {
+          url: 'https://www.googleapis.com/youtube/partner/v1/claims/{claimId}',
+          method: 'PUT'
+        },
+        params: params,
+        requiredParams: ['claimId'],
+        pathParams: ['claimId'],
+        context: self
+      };
+
+      return createAPIRequest(parameters, callback);
+    };
+  };
+
   this.claimSearch = {
 
     /**
